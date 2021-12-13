@@ -34,29 +34,20 @@ ostream& operator<< (ostream &out, Profile &user)
     return out;
 }
 
-//define the function below to find a given Profile for which only name is provided. This function should return
-//true or false. If it finds the given name, it should also change the value of the second parameter as it's
+//defining a function below to find a given Profile for which only name is provided. This function returns
+//true or false. If it finds the given name, it will also change the value of the second parameter as it's
 //passed by reference.
 bool searchDeque(deque<Profile> &pq, Profile &president);
 
 int main() {
-    //create a Profile queue called pQueue;
+    //creating a Profile queue called pQueue;
     queue<Profile> pQueue;
 
-    //create a Profile deque called pDeque;
+    //creating a Profile deque called pDeque;
     deque<Profile> pDeque;
 
     Profile temp; //temp as in temporary name
     string line; //string line helps to read the file
-/*this part is just informative. If you wanna practice how sstream and getline works
-    string test = "truck	car";
-    string token;
-    stringstream ss(test);
-    getline(ss, token, '\t');
-    cout<<token<<endl;
-    getline(ss, token, '\t');
-    cout<<token<<endl;
-*/
 
     //let's practice file I/O
     ifstream file("C:\\Users\\Gabep\\Downloads\\presidentsWstates.txt");
@@ -67,15 +58,15 @@ int main() {
             stringstream ss(line);
             getline(ss, temp.fullname, '\t');
             getline(ss, temp.state, '\t');
-            //use push for your queue to insert president Profiles.
+            //using push for our queue to insert president Profiles.
             pQueue.push(temp);
-            //use push_front for your deque to insert president Profiles
+            //using push_front for our deque to insert president Profiles
             pDeque.push_front(temp);
         }
     }
 
     cout<<"***********************\n\nPrinting queue members by using pop and front\n"<<endl;
-//use a while loop by using front and pop function to empty and print your President profiles.
+//using a while loop and the front and pop function to empty and print our President profiles.
 
     while(!pQueue.empty()){
         cout << pQueue.front() << endl;
@@ -84,7 +75,7 @@ int main() {
 
 
     cout<<"***********************\n\nPrinting deque members with iterator\n"<<endl;
-//use an iterator to print your President profiles.
+//using an iterator to print our President profiles.
     deque<Profile>::iterator dIter;
 
     for(dIter = pDeque.begin(); dIter!=pDeque.end(); dIter++) {
@@ -93,7 +84,7 @@ int main() {
 
 
 
-//use a for loop which works with indices to print your President profiles.
+//using a for loop which works with indices to print our President profiles.
     cout<<"***********************\n\nPrinting deque members with indices\n"<<endl;
 
     for(int i = 0; i<pDeque.size(); i++){
