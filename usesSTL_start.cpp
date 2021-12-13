@@ -1,6 +1,7 @@
 //
 // Created by Gabep on 12/13/2021.
 //
+/*
 #include <iostream>
 #include <fstream>
 #include <sstream>
@@ -32,13 +33,14 @@ ostream& operator<< (ostream &out, Profile &user)
 {
     out << user.fullname<<"--" <<user.state;
     return out;
-}
+}*/
 
 //defining a function below to find a given Profile for which only name is provided. This function returns
 //true or false. If it finds the given name, it will also change the value of the second parameter as it's
 //passed by reference.
-bool searchDeque(deque<Profile> &pq, Profile &president);
 
+//bool searchDeque(deque<Profile> &pq, Profile &president);
+/*
 int main() {
     //creating a Profile queue called pQueue;
     queue<Profile> pQueue;
@@ -63,8 +65,8 @@ int main() {
             //using push_front for our deque to insert president Profiles
             pDeque.push_front(temp);
         }
-    }
-
+    }*/
+/*
     cout<<"***********************\n\nPrinting queue members by using pop and front\n"<<endl;
 //using a while loop and the front and pop function to empty and print our President profiles.
 
@@ -102,8 +104,8 @@ int main() {
         cout<<"not found: "<<temp<<endl;
 
     return 0;
-}
-
+}*/
+/*
 bool searchDeque( deque<Profile> &pQueue,   Profile &president)
 {
     {
@@ -115,3 +117,4 @@ bool searchDeque( deque<Profile> &pQueue,   Profile &president)
         return false;
     }
 }
+*/
