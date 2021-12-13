@@ -51,7 +51,6 @@ int main() {
         }
     }
 
-
     Profile benny;
     benny = {"Sir Goobriel and Madam Ozzylin of Pullman", "PL"};
     pMylist.headinsert(benny);

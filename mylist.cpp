@@ -33,7 +33,7 @@ T Mylist<T>::deleteHead() // function deleting the first Node in the list
 }
 
 template<class T>
-bool Mylist<T>::search(T target) // function that can tell whether a node exists or note based of the data inputted as parameter
+bool Mylist<T>::search(T &target) // function that can tell whether a node exists or note based of the data inputted as parameter
 {
     Node<T>* here = head; // creating a pointer "here" of type Node<T> and setting it equal to head Node
 

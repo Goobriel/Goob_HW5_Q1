@@ -42,7 +42,7 @@ public:
     void headinsert(T theData); // Takes data of any type to insert to the head of a list
     T deleteHead(); // Deletes the node at the beginnning and returns the data element stored inside the node.
     // (JUST THE ELEMENT INSIDE, NOT THE NODE! This is okay because we are only asked to return the elements not the node.)
-    bool search(T target); //takes in an input and returns true or false depending on its existence among the elements in list
+    bool search(T &target); //takes in an input and returns true or false depending on its existence among the elements in list
     void display(); // displays all the data elements
 private:
     Node<T> *head; //Only data member for "Mylist" class is a pointer of type Node<t> called head
